@@ -1,0 +1,106 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "skills": "https://api-evangelist.github.io/agents-skills/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcat": "https://www.w3.org/ns/dcat#",
+
+    "SkillDefinition": "skills:SkillDefinition",
+    "SkillManifest": "skills:SkillManifest",
+    "Script": "skills:Script",
+
+    "name": "schema:name",
+    "display_name": "schema:alternateName",
+    "description": "schema:description",
+    "provider": "schema:provider",
+    "version": "schema:softwareVersion",
+    "license": "schema:license",
+
+    "runtime": {
+      "@id": "skills:runtime",
+      "@type": "xsd:string"
+    },
+    "repository": {
+      "@id": "schema:codeRepository",
+      "@type": "@id"
+    },
+    "homepage": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "entrypoint": {
+      "@id": "skills:entrypoint",
+      "@type": "xsd:string"
+    },
+    "instructions_file": {
+      "@id": "skills:instructions_file",
+      "@type": "xsd:string"
+    },
+    "scripts": {
+      "@id": "skills:scripts",
+      "@container": "@set",
+      "@type": "@id"
+    },
+    "skills_list": {
+      "@id": "skills:skills",
+      "@container": "@set",
+      "@type": "@id"
+    },
+    "runtimes": {
+      "@id": "skills:runtimes",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "policies": {
+      "@id": "skills:policies",
+      "@type": "@id"
+    },
+    "signing_required": {
+      "@id": "skills:signing_required",
+      "@type": "xsd:boolean"
+    },
+    "allow_network_calls": {
+      "@id": "skills:allow_network_calls",
+      "@type": "xsd:boolean"
+    },
+    "secrets_required": {
+      "@id": "skills:secrets_required",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "required_secrets": {
+      "@id": "skills:required_secrets",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "trigger_phrases": {
+      "@id": "skills:trigger_phrases",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "tags": {
+      "@id": "dcat:keyword",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "maintainers": {
+      "@id": "schema:maintainer",
+      "@container": "@set",
+      "@type": "@id"
+    },
+    "path": {
+      "@id": "skills:path",
+      "@type": "xsd:string"
+    },
+    "language": {
+      "@id": "schema:programmingLanguage",
+      "@type": "xsd:string"
+    },
+    "manifest_version": {
+      "@id": "skills:manifest_version",
+      "@type": "xsd:string"
+    }
+  }
+}

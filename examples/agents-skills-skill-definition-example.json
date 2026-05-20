@@ -1,0 +1,30 @@
+{
+  "name": "resend-send-email",
+  "display_name": "Send Email with Resend",
+  "description": "Compose and send transactional email through the Resend API, including HTML, attachments, and idempotency.",
+  "version": "1.4.0",
+  "runtime": "claude-code",
+  "provider": "Resend",
+  "repository": "https://github.com/resend/resend-skills",
+  "entrypoint": "skills/send-email/SKILL.md",
+  "instructions_file": "skills/send-email/instructions.md",
+  "scripts": [
+    {
+      "path": "skills/send-email/scripts/send.py",
+      "language": "python",
+      "description": "POSTs the rendered payload to the Resend API."
+    },
+    {
+      "path": "skills/send-email/scripts/validate.sh",
+      "language": "bash",
+      "description": "Validates RESEND_API_KEY and sender domain before sending."
+    }
+  ],
+  "tags": ["email", "transactional", "messaging"],
+  "license": "MIT",
+  "trigger_phrases": [
+    "send a transactional email",
+    "email this report with Resend"
+  ],
+  "required_secrets": ["RESEND_API_KEY"]
+}

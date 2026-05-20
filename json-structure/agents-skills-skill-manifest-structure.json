@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/agents-skills/refs/heads/main/json-structure/agents-skills-skill-manifest-structure.json",
+  "name": "SkillManifest",
+  "description": "A repository-level manifest listing the skills published by a single vendor or organization.",
+  "type": "object",
+  "properties": {
+    "manifest_version": {
+      "type": "string",
+      "description": "Version of the skill manifest format.",
+      "example": "0.1"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the skill bundle or repository.",
+      "example": "ngrok Agent Skills"
+    },
+    "provider": {
+      "type": "string",
+      "description": "Vendor or organization publishing the skill bundle.",
+      "example": "ngrok"
+    },
+    "homepage": {
+      "type": "uri",
+      "description": "Vendor product or documentation homepage.",
+      "example": "https://ngrok.com"
+    },
+    "repository": {
+      "type": "uri",
+      "description": "Canonical GitHub repository URL for the skill bundle.",
+      "example": "https://github.com/ngrok/agent-skills"
+    },
+    "runtimes": {
+      "type": "array",
+      "description": "Agent runtimes the skills in this repository target.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "claude-code",
+          "claude-agent-sdk",
+          "cursor",
+          "openai-apps-sdk",
+          "gemini",
+          "generic"
+        ]
+      },
+      "example": [
+        "claude-code",
+        "claude-agent-sdk"
+      ]
+    },
+    "skills": {
+      "type": "array",
+      "description": "List of skills contained in this repository.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "ngrok-create-tunnel"
+          },
+          "path": {
+            "type": "string",
+            "example": "skills/create-tunnel"
+          },
+          "description": {
+            "type": "string",
+            "example": "Create an ephemeral ngrok tunnel and return its public URL."
+          },
+          "version": {
+            "type": "string",
+            "example": "0.3.1"
+          }
+        },
+        "required": [
+          "name",
+          "path"
+        ]
+      }
+    },
+    "policies": {
+      "type": "object",
+      "description": "Governance policies that apply to the skills in this bundle.",
+      "properties": {
+        "signing_required": {
+          "type": "boolean",
+          "example": true
+        },
+        "allow_network_calls": {
+          "type": "boolean",
+          "example": true
+        },
+        "secrets_required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": [
+            "NGROK_AUTH_TOKEN"
+          ]
+        }
+      }
+    },
+    "maintainers": {
+      "type": "array",
+      "description": "People or teams responsible for the skill bundle.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "ngrok DevRel"
+          },
+          "email": {
+            "type": "string",
+            "example": "devrel@ngrok.com"
+          }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "Topic tags categorizing the manifest.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "networking",
+        "tunneling",
+        "developer-tools"
+      ]
+    }
+  },
+  "required": [
+    "manifest_version",
+    "name",
+    "provider",
+    "skills"
+  ]
+}

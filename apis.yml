@@ -1,0 +1,183 @@
+aid: agents-skills
+name: Agent Skills
+description: >-
+  An index and topic collection covering Agent Skills, the packaged, file-based capability units that AI coding agents load to extend their behavior. Agent Skills bundle instructions, scripts, schemas,
+  and reference material into directories that agents discover, plan against, and execute at runtime, giving organizations a portable way to govern how AI assistants interact with their products and
+  APIs. This collection tracks vendor-published skill repositories (Claude Code skills, Claude Agent SDK skills, Cursor rules, OpenAI Apps SDK skills, and capability packages) shipped by API providers
+  across developer tools, data platforms, SaaS, and infrastructure.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Agent Skills
+- Claude Skills
+- Capability Packages
+- AI Agents
+- Developer Tooling
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/agents-skills/refs/heads/main/apis.yml
+created: '2026-05-19'
+modified: '2026-05-19'
+specificationVersion: '0.19'
+apis: []
+network:
+- name: ActiveCampaign
+  url: https://raw.githubusercontent.com/api-evangelist/activecampaign/refs/heads/main/apis.yml
+- name: Airbyte
+  url: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/apis.yml
+- name: Airtable
+  url: https://raw.githubusercontent.com/api-evangelist/airtable/refs/heads/main/apis.yml
+- name: Android
+  url: https://raw.githubusercontent.com/api-evangelist/android/refs/heads/main/apis.yml
+- name: Angular
+  url: https://raw.githubusercontent.com/api-evangelist/angular/refs/heads/main/apis.yml
+- name: Anthropic
+  url: https://raw.githubusercontent.com/api-evangelist/anthropic/refs/heads/main/apis.yml
+- name: Anthropic Claude
+  url: https://raw.githubusercontent.com/api-evangelist/anthropic-claude/refs/heads/main/apis.yml
+- name: Apify
+  url: https://raw.githubusercontent.com/api-evangelist/apify/refs/heads/main/apis.yml
+- name: Apollo Config
+  url: https://raw.githubusercontent.com/api-evangelist/apollo-config/refs/heads/main/apis.yml
+- name: Apollo GraphQL
+  url: https://raw.githubusercontent.com/api-evangelist/apollo-graphql/refs/heads/main/apis.yml
+- name: Appium
+  url: https://raw.githubusercontent.com/api-evangelist/appium/refs/heads/main/apis.yml
+- name: Appwrite
+  url: https://raw.githubusercontent.com/api-evangelist/appwrite/refs/heads/main/apis.yml
+- name: Atlassian
+  url: https://raw.githubusercontent.com/api-evangelist/atlassian/refs/heads/main/apis.yml
+- name: Auth0
+  url: https://raw.githubusercontent.com/api-evangelist/auth0/refs/heads/main/apis.yml
+- name: Box
+  url: https://raw.githubusercontent.com/api-evangelist/box/refs/heads/main/apis.yml
+- name: Canva
+  url: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/apis.yml
+- name: Cerbos
+  url: https://raw.githubusercontent.com/api-evangelist/cerbos/refs/heads/main/apis.yml
+- name: Claude
+  url: https://raw.githubusercontent.com/api-evangelist/claude/refs/heads/main/apis.yml
+- name: Contentful
+  url: https://raw.githubusercontent.com/api-evangelist/contentful/refs/heads/main/apis.yml
+- name: Databricks
+  url: https://raw.githubusercontent.com/api-evangelist/databricks/refs/heads/main/apis.yml
+- name: Docsify
+  url: https://raw.githubusercontent.com/api-evangelist/docsify/refs/heads/main/apis.yml
+- name: Figma
+  url: https://raw.githubusercontent.com/api-evangelist/figma/refs/heads/main/apis.yml
+- name: Fivetran
+  url: https://raw.githubusercontent.com/api-evangelist/fivetran/refs/heads/main/apis.yml
+- name: GEMINI.md
+  url: https://raw.githubusercontent.com/api-evangelist/gemini-md/refs/heads/main/apis.yml
+- name: GitHub
+  url: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/apis.yml
+- name: Google Gemini
+  url: https://raw.githubusercontent.com/api-evangelist/google-gemini/refs/heads/main/apis.yml
+- name: Hookdeck
+  url: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/apis.yml
+- name: HubSpot
+  url: https://raw.githubusercontent.com/api-evangelist/hubspot/refs/heads/main/apis.yml
+- name: Hugging Face
+  url: https://raw.githubusercontent.com/api-evangelist/hugging-face/refs/heads/main/apis.yml
+- name: Jentic
+  url: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/apis.yml
+- name: JFrog
+  url: https://raw.githubusercontent.com/api-evangelist/jfrog/refs/heads/main/apis.yml
+- name: MailerLite
+  url: https://raw.githubusercontent.com/api-evangelist/mailerlite/refs/heads/main/apis.yml
+- name: Microsoft TypeScript
+  url: https://raw.githubusercontent.com/api-evangelist/microsoft-typescript/refs/heads/main/apis.yml
+- name: MongoDB
+  url: https://raw.githubusercontent.com/api-evangelist/mongodb/refs/heads/main/apis.yml
+- name: ngrok
+  url: https://raw.githubusercontent.com/api-evangelist/ngrok/refs/heads/main/apis.yml
+- name: OpenAI
+  url: https://raw.githubusercontent.com/api-evangelist/openai/refs/heads/main/apis.yml
+- name: Postman
+  url: https://raw.githubusercontent.com/api-evangelist/postman/refs/heads/main/apis.yml
+- name: Prisma
+  url: https://raw.githubusercontent.com/api-evangelist/prisma/refs/heads/main/apis.yml
+- name: Pulumi
+  url: https://raw.githubusercontent.com/api-evangelist/pulumi/refs/heads/main/apis.yml
+- name: Replicate
+  url: https://raw.githubusercontent.com/api-evangelist/replicate/refs/heads/main/apis.yml
+- name: Resend
+  url: https://raw.githubusercontent.com/api-evangelist/resend/refs/heads/main/apis.yml
+- name: Sanity
+  url: https://raw.githubusercontent.com/api-evangelist/sanity/refs/heads/main/apis.yml
+- name: Speakeasy
+  url: https://raw.githubusercontent.com/api-evangelist/speakeasy/refs/heads/main/apis.yml
+- name: Supabase
+  url: https://raw.githubusercontent.com/api-evangelist/supabase/refs/heads/main/apis.yml
+- name: Temporal
+  url: https://raw.githubusercontent.com/api-evangelist/temporal/refs/heads/main/apis.yml
+- name: TypeScript
+  url: https://raw.githubusercontent.com/api-evangelist/typescript/refs/heads/main/apis.yml
+- name: Webflow
+  url: https://raw.githubusercontent.com/api-evangelist/webflow/refs/heads/main/apis.yml
+- name: WorkOS
+  url: https://raw.githubusercontent.com/api-evangelist/workos/refs/heads/main/apis.yml
+- name: Zoom
+  url: https://raw.githubusercontent.com/api-evangelist/zoom/refs/heads/main/apis.yml
+common:
+- type: Portal
+  url: https://apievangelist.com
+- type: GitHubOrganization
+  url: https://github.com/api-evangelist
+- type: Features
+  data:
+  - name: File-Based Capability Packaging
+    description: Agent Skills bundle markdown instructions, executable scripts, schemas, and reference material into versioned directories that agents can load deterministically at runtime.
+  - name: Vendor-Published Skill Repositories
+    description: API providers ship official GitHub repositories such as resend-skills, ngrok/agent-skills, postman-skills, and jfrog-skills to deliver first-party automation behavior for their products.
+  - name: Progressive Disclosure of Context
+    description: Skills surface a short SKILL.md frontmatter for discovery, then load deeper instructions, scripts, and assets only when an agent activates them, keeping token usage low.
+  - name: Agent-Executable Tooling
+    description: Skills package shell, Python, or Node scripts alongside instructions so agents can perform multi-step work (auth, file generation, API calls) instead of relying on prose-only prompting.
+  - name: Multi-Runtime Compatibility
+    description: Skill formats are emerging across Claude Code, Claude Agent SDK, Cursor, OpenAI Apps SDK, and Gemini, with vendors publishing parallel skill sets for each runtime.
+  - name: Skill Discovery and Governance
+    description: Organizations curate skill catalogs, sign skill manifests, and gate skill activation through allow lists so AI agents only run vetted capability packages.
+  - name: API-First Skill Generation
+    description: Skills are increasingly generated from OpenAPI, AsyncAPI, and APIs.json descriptions so each API operation becomes a callable, governed capability inside an agent.
+  - name: Open Skill Ecosystem
+    description: A growing ecosystem of community-maintained skill registries and indexes complements vendor repos, mirroring how the npm and PyPI ecosystems formed around packages.
+- type: UseCases
+  data:
+  - name: First-Party Product Skills
+    description: SaaS vendors ship official skill repos so AI agents in Claude Code or Cursor can create resources, run reports, and operate their products without bespoke prompt engineering.
+  - name: Internal Developer Platform Skills
+    description: Platform teams package their CI/CD, deployment, and observability workflows as governed skills so every engineering agent uses the same approved automations.
+  - name: API Onboarding and Education
+    description: API providers use skills to walk agents through authentication, sandbox setup, and "hello world" requests, accelerating time-to-first-call for developer-led agents.
+  - name: Governed Capability Distribution
+    description: Compliance-sensitive organizations distribute skills with allow-lists, signing, and audit trails to ensure only approved AI behaviors run against production systems.
+  - name: API Specification to Skill Pipelines
+    description: Teams convert OpenAPI specs into skill bundles (one operation per tool) so agents get typed, governed access to every endpoint without writing custom wrappers.
+  - name: Cross-Runtime Skill Portability
+    description: Vendors maintain mirror skill sets for Claude, Cursor, and OpenAI Apps SDK, giving customers a consistent experience across whichever coding agent they choose.
+  - name: Skill-Driven Customer Support
+    description: Support and DevRel teams publish skills that diagnose common issues, pull logs, and open tickets, letting customer-side agents resolve problems autonomously.
+  - name: Sandbox and Test Environment Skills
+    description: Skill bundles provision throwaway environments, seed test data, and tear down resources so agents can exercise APIs safely during development and CI.
+- type: Integrations
+  data:
+  - name: Claude Code
+    description: Anthropic's official coding agent loads skills from the .claude/skills directory and surfaces them as plan-then-execute capabilities.
+  - name: Claude Agent SDK
+    description: The Claude Agent SDK lets developers embed skill loading and execution into their own agent harnesses with the same SKILL.md contract as Claude Code.
+  - name: Cursor
+    description: Cursor consumes vendor rules and skill-style instruction bundles to extend its in-editor coding agent with provider-specific behavior.
+  - name: OpenAI Apps SDK
+    description: The OpenAI Apps SDK provides a skill-equivalent surface so apps and agents on the OpenAI platform can ship packaged capabilities to ChatGPT and developer tools.
+  - name: Google Gemini
+    description: Gemini's GEMINI.md and skill-style instruction files let vendors target Google's coding agent surface alongside Claude and Cursor.
+  - name: GitHub
+    description: GitHub hosts the canonical distribution channel for skill repositories, including vendor-published agent-skills, claude-skills, and *-skills repos.
+  - name: Postman
+    description: Postman's skill repository ships first-party capabilities for working with Postman collections, workspaces, and the Postman API from coding agents.
+  - name: Anthropic
+    description: Anthropic publishes the SKILL.md format, reference skill repositories, and the Skills feature in Claude Code that anchors the broader ecosystem.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+humanURL: https://apievangelist.com

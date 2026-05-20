@@ -1,0 +1,256 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: Agent Skills
+  description: Vocabulary for the Agent Skills topic, covering vendor-published skill repositories, skill definitions, manifests, runtimes, and governance for file-based AI agent capability packages.
+  created: '2026-05-19'
+  modified: '2026-05-19'
+
+operational:
+  apis:
+    - name: Anthropic Claude Skills
+      namespace: anthropic-claude
+      status: active
+    - name: Resend Skills
+      namespace: resend
+      status: active
+    - name: ngrok Agent Skills
+      namespace: ngrok
+      status: active
+    - name: Postman Skills
+      namespace: postman
+      status: active
+    - name: JFrog Skills
+      namespace: jfrog
+      status: active
+    - name: Airbyte Claude Skills
+      namespace: airbyte
+      status: active
+    - name: Apollo GraphQL Skills
+      namespace: apollo-graphql
+      status: active
+    - name: Airtable Skills
+      namespace: airtable
+      status: active
+
+  resources:
+    - name: skills
+      description: Individual skill bundles, each described by a SKILL.md and supporting assets
+      actions:
+        - list
+        - get
+        - install
+        - activate
+        - execute
+        - deactivate
+    - name: manifests
+      description: Repository-level manifests listing all skills published by a vendor
+      actions:
+        - list
+        - get
+        - validate
+    - name: scripts
+      description: Executable assets (bash, python, node) shipped inside a skill bundle
+      actions:
+        - list
+        - get
+        - execute
+    - name: bindings
+      description: Mappings between a skill and a specific agent runtime, environment, or secret
+      actions:
+        - create
+        - get
+        - list
+        - delete
+    - name: policies
+      description: Governance rules that gate which skills agents may activate
+      actions:
+        - list
+        - get
+        - apply
+
+  actions:
+    - name: list
+      description: Enumerate skills, manifests, scripts, or policies
+      httpMethod: GET
+      pattern: read
+    - name: get
+      description: Retrieve a single skill, manifest, or related resource
+      httpMethod: GET
+      pattern: read
+    - name: install
+      description: Add a skill bundle to an agent's skill directory
+      httpMethod: POST
+      pattern: write
+    - name: activate
+      description: Load a skill into an active agent session so it can be invoked
+      httpMethod: POST
+      pattern: write
+    - name: execute
+      description: Run a skill or one of its scripts on behalf of the agent
+      httpMethod: POST
+      pattern: write
+    - name: deactivate
+      description: Unload a skill from an agent session
+      httpMethod: POST
+      pattern: write
+    - name: validate
+      description: Validate a skill or manifest against the schema and policy rules
+      httpMethod: POST
+      pattern: write
+    - name: apply
+      description: Apply a governance policy to a skill or skill bundle
+      httpMethod: POST
+      pattern: write
+
+  schemas:
+    core:
+      - name: SkillDefinition
+        description: "A single Agent Skill: a file-based capability package that an AI coding agent can discover, load, and execute"
+        properties:
+          - name
+          - display_name
+          - description
+          - version
+          - runtime
+          - provider
+          - repository
+          - entrypoint
+          - instructions_file
+          - scripts
+          - tags
+          - license
+          - trigger_phrases
+          - required_secrets
+      - name: SkillManifest
+        description: Repository-level manifest listing the skills published by a vendor or organization
+        properties:
+          - manifest_version
+          - name
+          - provider
+          - homepage
+          - repository
+          - runtimes
+          - skills
+          - policies
+          - maintainers
+          - tags
+
+  enums:
+    runtimes:
+      - claude-code
+      - claude-agent-sdk
+      - cursor
+      - openai-apps-sdk
+      - gemini
+      - generic
+    script_languages:
+      - bash
+      - python
+      - node
+      - typescript
+      - other
+    skill_statuses:
+      - draft
+      - active
+      - deprecated
+      - removed
+
+capability:
+  workflows:
+    - name: Publish Vendor Skill Bundle
+      description: A vendor authors, validates, and publishes a *-skills repository so AI coding agents can install their capabilities
+      apis:
+        - anthropic-claude
+        - resend
+        - postman
+      personas:
+        - Vendor DevRel Engineer
+      domains:
+        - Skill Authoring
+    - name: Install and Activate Skill
+      description: A developer or agent installs a vendor skill bundle and activates specific skills inside a Claude Code or Claude Agent SDK session
+      apis:
+        - anthropic-claude
+        - ngrok
+      personas:
+        - Agent Developer
+      domains:
+        - Skill Runtime
+    - name: Govern Skill Activation
+      description: A platform team curates an allow-list of approved skills, signs manifests, and enforces policy at activation time
+      apis:
+        - anthropic-claude
+      personas:
+        - Platform Engineer
+      domains:
+        - Skill Governance
+    - name: Generate Skills from OpenAPI
+      description: Convert an OpenAPI specification into a skill bundle, one skill per operation, so an agent gets governed access to every endpoint
+      apis:
+        - apollo-graphql
+        - postman
+      personas:
+        - API Producer
+      domains:
+        - Skill Authoring
+
+  personas:
+    - id: vendor-devrel-engineer
+      name: Vendor DevRel Engineer
+      description: Engineers at API vendors who design, author, and ship official skill bundles for their products
+      workflows:
+        - Publish Vendor Skill Bundle
+        - Generate Skills from OpenAPI
+    - id: agent-developer
+      name: Agent Developer
+      description: Developers building applications and workflows on top of Claude Code, the Claude Agent SDK, or similar agent runtimes
+      workflows:
+        - Install and Activate Skill
+    - id: platform-engineer
+      name: Platform Engineer
+      description: Platform and security engineers governing which skills are allowed to run inside their organization's agents
+      workflows:
+        - Govern Skill Activation
+    - id: api-producer
+      name: API Producer
+      description: API teams that ship OpenAPI/AsyncAPI specs and want their endpoints exposed as agent-callable skills
+      workflows:
+        - Generate Skills from OpenAPI
+
+  domains:
+    - name: Skill Authoring
+      description: Authoring, validating, and publishing skill bundles, including SKILL.md, scripts, and assets
+    - name: Skill Runtime
+      description: Installing, activating, executing, and deactivating skills inside an AI agent runtime
+    - name: Skill Governance
+      description: Allow-listing, signing, auditing, and policy enforcement for skill activation across an organization
+
+crossReference:
+  - resource: skills
+    operations:
+      - list
+      - install
+      - activate
+      - execute
+    workflows:
+      - Install and Activate Skill
+    personas:
+      - Agent Developer
+  - resource: manifests
+    operations:
+      - list
+      - get
+      - validate
+    workflows:
+      - Publish Vendor Skill Bundle
+    personas:
+      - Vendor DevRel Engineer
+  - resource: policies
+    operations:
+      - list
+      - apply
+    workflows:
+      - Govern Skill Activation
+    personas:
+      - Platform Engineer

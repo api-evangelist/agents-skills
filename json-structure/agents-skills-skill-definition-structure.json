@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/agents-skills/refs/heads/main/json-structure/agents-skills-skill-definition-structure.json",
+  "name": "SkillDefinition",
+  "description": "Describes a single Agent Skill: a file-based capability package that an AI coding agent can discover, load, and execute.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Stable, slug-style identifier for the skill, used as the directory name and discovery key.",
+      "example": "resend-send-email"
+    },
+    "display_name": {
+      "type": "string",
+      "description": "Human-readable name surfaced to the agent and user when the skill is listed.",
+      "example": "Send Email with Resend"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of what the skill does and when an agent should invoke it.",
+      "example": "Compose and send transactional email through the Resend API, including HTML, attachments, and idempotency."
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the skill bundle.",
+      "example": "1.4.0"
+    },
+    "runtime": {
+      "type": "string",
+      "description": "Agent runtime that the skill targets.",
+      "enum": [
+        "claude-code",
+        "claude-agent-sdk",
+        "cursor",
+        "openai-apps-sdk",
+        "gemini",
+        "generic"
+      ],
+      "example": "claude-code"
+    },
+    "provider": {
+      "type": "string",
+      "description": "Vendor or organization that publishes the skill.",
+      "example": "Resend"
+    },
+    "repository": {
+      "type": "uri",
+      "description": "URL of the GitHub repository that hosts the skill bundle.",
+      "example": "https://github.com/resend/resend-skills"
+    },
+    "entrypoint": {
+      "type": "string",
+      "description": "Relative path to the skill's primary instruction file (typically SKILL.md).",
+      "example": "skills/send-email/SKILL.md"
+    },
+    "instructions_file": {
+      "type": "string",
+      "description": "Path to extended instructions loaded after the skill is activated.",
+      "example": "skills/send-email/instructions.md"
+    },
+    "scripts": {
+      "type": "array",
+      "description": "Executable assets the skill ships for the agent to run.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "example": "scripts/send.py"
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "bash",
+              "python",
+              "node",
+              "typescript",
+              "other"
+            ],
+            "example": "python"
+          },
+          "description": {
+            "type": "string",
+            "example": "POSTs the rendered payload to the Resend API."
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "Topic tags used to categorize and discover the skill.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "email",
+        "transactional",
+        "messaging"
+      ]
+    },
+    "license": {
+      "type": "string",
+      "description": "SPDX license identifier for the skill bundle.",
+      "example": "MIT"
+    },
+    "trigger_phrases": {
+      "type": "array",
+      "description": "Example user phrases that should activate the skill.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "send a transactional email",
+        "email this report"
+      ]
+    },
+    "required_secrets": {
+      "type": "array",
+      "description": "Names of secrets or credentials the agent must have available to run the skill.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "RESEND_API_KEY"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "runtime",
+    "provider"
+  ]
+}
