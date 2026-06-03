@@ -1,0 +1,23 @@
+title: Agent Skills
+description: An index and topic collection covering Agent Skills, the packaged, file-based
+  capability units that AI coding agents load to extend their behavior. Agent Skills
+  bundle instructions, scripts, schemas, and reference material into directories that
+  agents discover, plan against, and execute at runtime, giving organizations a portable
+  way to govern how AI assistants interact with their products and APIs. This collection
+  tracks vendor-published skill repositories (Claude Code skills, Claude Agent SDK
+  skills, Cursor rules, OpenAI Apps SDK skills, and capability packages) shipped by
+  API providers across developer tools, data platforms, SaaS, and infrastructure.
+url: https://agents-skills.apievangelist.com
+collections:
+  api_stories:
+    output: false
+exclude:
+- README.md
+- Gemfile
+- Gemfile.lock
+- Dockerfile
+- examples
+- json-ld
+- json-schema
+- json-structure
+- vocabulary
