@@ -6,7 +6,7 @@ description: >-
   APIs. This collection tracks vendor-published skill repositories (Claude Code skills, Claude Agent SDK skills, Cursor rules, OpenAI Apps SDK skills, and capability packages) shipped by API providers
   across developer tools, data platforms, SaaS, and infrastructure.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Agent Skills
 - Claude Skills
