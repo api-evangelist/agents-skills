@@ -3,8 +3,6 @@ An index and topic collection covering Agent Skills, the packaged, file-based ca
 
 **URL:** [https://apievangelist.com](https://apievangelist.com)
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
-
 ## Tags:
 
  - Agent Skills, Claude Skills, Capability Packages, AI Agents, Developer Tooling
