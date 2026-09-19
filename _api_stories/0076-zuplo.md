@@ -1,7 +1,7 @@
 ---
-title: How to Manage Authentication and Authorization for MCP in Multi-Agent Systems
-link: https://zuplo.com//blog/mcp-auth-multi-agent-systems
-published: '2026-08-19'
+title: Why 'Bring Your Own Agent' Is Key to MCP Infrastructure
+link: https://zuplo.com//blog/bring-your-own-agent-mcp-infrastructure
+published: '2026-08-24'
 provider: zuplo
 repo: https://github.com/api-evangelist/zuplo
 domain: zuplo.com
