@@ -1,5 +1,6 @@
 aid: agents-skills
 name: Agent Skills
+kind: topic
 description: >-
   An index and topic collection covering Agent Skills, the packaged, file-based capability units that AI coding agents load to extend their behavior. Agent Skills bundle instructions, scripts, schemas,
   and reference material into directories that agents discover, plan against, and execute at runtime, giving organizations a portable way to govern how AI assistants interact with their products and
