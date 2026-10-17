@@ -1,7 +1,8 @@
 ---
-title: The 3 roles AI agents play in your developer platform
-link: https://thenewstack.io/ai-agent-platform-roles/
-published: '2026-08-29'
+title: Meta lets Claude and Codex configure WhatsApp Business via MCP. But the agents
+  don’t get their own identity.
+link: https://thenewstack.io/meta-mcp-whatsapp-business-claude/
+published: '2026-09-15'
 provider: the-new-stack
 repo: https://github.com/api-evangelist/the-new-stack
 domain: thenewstack.io
