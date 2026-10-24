@@ -1,7 +1,7 @@
 ---
-title: 'mcp: io.github.davarion-tech/agentic-browser'
-link: https://agentalog.com/api/listings/mcp_io_github_davarion_tech_agentic_browser_1afb8cc4
-published: '2026-10-17'
+title: 'mcp: Agent Ready'
+link: https://agentalog.com/api/listings/mcp_it_sneeze_agentready_agent_ready_c712d730
+published: '2026-10-24'
 provider: meta-agent-tools
 repo: https://github.com/api-evangelist/meta-agent-tools
 domain: agentalog.com
