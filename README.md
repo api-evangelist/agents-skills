@@ -1,143 +1,97 @@
-# Agent Skills (agents-skills)
+# Agent Skills
+
+<!-- API-EVANGELIST-PROVENANCE:BEGIN -->
+> ### About this repository
+>
+> **This is not our API.** This repository is an independent, third-party profile of a company's
+> **publicly available** API surface, maintained by [API Evangelist](https://apievangelist.com).
+> API Evangelist does not operate, host, resell, or support this company's APIs, and is not
+> affiliated with or endorsed by the company unless stated on the profile.
+>
+> **Where the information came from.** Everything here is assembled from material a member of the
+> public can reach with a browser and no credentials — the company's own website, developer portal
+> and documentation, the specifications it publishes for public use (OpenAPI, AsyncAPI, JSON Schema,
+> `apis.json`, `llms.txt` and similar), its public repositories, and its public status, pricing and
+> changelog pages. **Nothing here is obtained by breaching a system, defeating an access control, or
+> using credentials of any kind.**
+>
+> **The rating is an independent assessment.** The Kin Score and Agent Readiness rating are
+> independently calculated scores of a company's *public* API artifacts, produced by API Evangelist
+> against a published rubric. They are not certifications, endorsements, security assessments, or
+> audits, and they score published artifacts — not the quality, safety, or security of the software.
+>
+> **Corrections, re-scores, and removal are free.** No partnership, contract, or purchase is
+> required, and you do not need to justify the request.
+>
+> - **Something wrong?** Open an issue on this repository, or email
+>   [info@apievangelist.com](mailto:info@apievangelist.com).
+> - **Published something new?** Ask for a re-score and we will re-run the rating.
+> - **Want the listing taken down?** Say so and we will honor it. The profile is reduced to your
+>   company name, a factual description, and a link to your own site, and the company is recorded as
+>   **unrated** — never scored zero for having asked.
+>
+> **Response times.** Acknowledgement within **one business day**; removal or restriction within
+> **two business days**; corrections and re-scores within **five business days**.
+>
+> **Not from the company, and here with a question?** You are welcome here — we would rather be the
+> front line and point you the right way than have a good report go nowhere. What this repository
+> can answer is narrow, though, so it is worth knowing who you are actually looking for:
+>
+> - **A question about how the API works, an account, billing, or a bug in the service** — that is
+>   the company's own support, not us. We profile this API; we do not operate it and cannot see
+>   your account.
+> - **A bug in an open-source project we only catalog** — file it on that project's own repository.
+>   This has happened with a real and correct bug report that reached us instead of the people who
+>   could fix it, which helped nobody.
+> - **Anything about this listing itself** — the description, the tags, the rating, a missing or
+>   wrong artifact — is ours. Open an issue here.
+> - **Not sure, or something general about API Evangelist or APIs.io** — open an issue on the
+>   [APIs.io Inbox](https://github.com/api-search/inbox) and we will route it.
+>
+> **This repository contains no software, and we will never ask you to download anything.** There is
+> no build, release, installer, or binary here — only text and machine-readable API descriptions, so
+> there is nothing here that can be "corrupt" or need "repairing". Any issue, comment, or email
+> claiming otherwise and offering a download link is not from us and is hostile. Do not follow the
+> link; it is a lure. Report it to GitHub and, if you like, tell us at
+> [info@apievangelist.com](mailto:info@apievangelist.com) so we can take it down.
+>
+> **On a security or compliance team?** Email
+> [info@apievangelist.com](mailto:info@apievangelist.com) with *security* in the subject line and
+> you will get a person, not a form. We will tell you exactly which public URLs this profile was
+> built from so your team can see the same surface we did, and we will take the listing down on
+> request while you work through it.
+>
+> Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
+<!-- API-EVANGELIST-PROVENANCE:END -->
+
 An index and topic collection covering Agent Skills, the packaged, file-based capability units that AI coding agents load to extend their behavior. Agent Skills bundle instructions, scripts, schemas, and reference material into directories that agents discover, plan against, and execute at runtime, giving organizations a portable way to govern how AI assistants interact with their products and APIs. This collection tracks vendor-published skill repositories (Claude Code skills, Claude Agent SDK skills, Cursor rules, OpenAI Apps SDK skills, and capability packages) shipped by API providers across developer tools, data platforms, SaaS, and infrastructure.
 
-**URL:** [https://apievangelist.com](https://apievangelist.com)
+**Areas:** Agent Skills · Claude Skills · Capability Packages · AI Agents · Developer Tooling
 
-## Tags:
+## Agent Skills on APIs.io
 
- - Agent Skills, Claude Skills, Capability Packages, AI Agents, Developer Tooling
+Everything profiled for Agent Skills is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/agents-skills/](https://apis.io/providers/agents-skills/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+## Where to find this API
 
-- **Created:** 2026-05-19
-- **Modified:** 2026-05-19
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-## Common Properties
+- [GitHub](https://github.com/api-evangelist)
 
-- [Portal](https://apievangelist.com)
-- [GitHubOrganization](https://github.com/api-evangelist)
-- [JSONSchema - Skill Definition Schema](https://raw.githubusercontent.com/api-evangelist/agents-skills/refs/heads/main/json-schema/agents-skills-skill-definition-schema.json)
-- [JSONSchema - Skill Manifest Schema](https://raw.githubusercontent.com/api-evangelist/agents-skills/refs/heads/main/json-schema/agents-skills-skill-manifest-schema.json)
-- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/agents-skills/refs/heads/main/json-ld/agents-skills-context.jsonld)
-- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/agents-skills/refs/heads/main/vocabulary/agents-skills-vocabulary.yaml)
+## API Evangelist rating
 
-## Features
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
 
-| Name | Description |
-|------|-------------|
-| File-Based Capability Packaging | Agent Skills bundle markdown instructions, executable scripts, schemas, and reference material into versioned directories that agents can load deterministically at runtime. |
-| Vendor-Published Skill Repositories | API providers ship official GitHub repositories such as resend-skills, ngrok/agent-skills, postman-skills, and jfrog-skills to deliver first-party automation behavior for their products. |
-| Progressive Disclosure of Context | Skills surface a short SKILL.md frontmatter for discovery, then load deeper instructions, scripts, and assets only when an agent activates them, keeping token usage low. |
-| Agent-Executable Tooling | Skills package shell, Python, or Node scripts alongside instructions so agents can perform multi-step work instead of relying on prose-only prompting. |
-| Multi-Runtime Compatibility | Skill formats are emerging across Claude Code, Claude Agent SDK, Cursor, OpenAI Apps SDK, and Gemini, with vendors publishing parallel skill sets for each runtime. |
-| Skill Discovery and Governance | Organizations curate skill catalogs, sign skill manifests, and gate skill activation through allow lists so AI agents only run vetted capability packages. |
-| API-First Skill Generation | Skills are increasingly generated from OpenAPI, AsyncAPI, and APIs.json descriptions so each API operation becomes a callable, governed capability inside an agent. |
-| Open Skill Ecosystem | A growing ecosystem of community-maintained skill registries and indexes complements vendor repos, mirroring how npm and PyPI formed around packages. |
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
 
-## Use Cases
+## How this profile is made
 
-| Name | Description |
-|------|-------------|
-| First-Party Product Skills | SaaS vendors ship official skill repos so AI agents in Claude Code or Cursor can create resources, run reports, and operate their products without bespoke prompt engineering. |
-| Internal Developer Platform Skills | Platform teams package CI/CD, deployment, and observability workflows as governed skills so every engineering agent uses the same approved automations. |
-| API Onboarding and Education | API providers use skills to walk agents through authentication, sandbox setup, and "hello world" requests, accelerating time-to-first-call for developer-led agents. |
-| Governed Capability Distribution | Compliance-sensitive organizations distribute skills with allow-lists, signing, and audit trails to ensure only approved AI behaviors run against production systems. |
-| API Specification to Skill Pipelines | Teams convert OpenAPI specs into skill bundles (one operation per tool) so agents get typed, governed access to every endpoint without writing custom wrappers. |
-| Cross-Runtime Skill Portability | Vendors maintain mirror skill sets for Claude, Cursor, and OpenAI Apps SDK, giving customers a consistent experience across whichever coding agent they choose. |
-| Skill-Driven Customer Support | Support and DevRel teams publish skills that diagnose common issues, pull logs, and open tickets, letting customer-side agents resolve problems autonomously. |
-| Sandbox and Test Environment Skills | Skill bundles provision throwaway environments, seed test data, and tear down resources so agents can exercise APIs safely during development and CI. |
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-## Integrations
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Agent Skills: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-| Name | Description |
-|------|-------------|
-| Claude Code | Anthropic's official coding agent loads skills from the .claude/skills directory and surfaces them as plan-then-execute capabilities. |
-| Claude Agent SDK | The Claude Agent SDK lets developers embed skill loading and execution into their own agent harnesses with the same SKILL.md contract as Claude Code. |
-| Cursor | Cursor consumes vendor rules and skill-style instruction bundles to extend its in-editor coding agent with provider-specific behavior. |
-| OpenAI Apps SDK | The OpenAI Apps SDK provides a skill-equivalent surface so apps and agents on the OpenAI platform can ship packaged capabilities. |
-| Google Gemini | Gemini's GEMINI.md and skill-style instruction files let vendors target Google's coding agent surface alongside Claude and Cursor. |
-| GitHub | GitHub hosts the canonical distribution channel for skill repositories, including vendor-published agent-skills, claude-skills, and *-skills repos. |
-| Postman | Postman's skill repository ships first-party capabilities for working with Postman collections, workspaces, and the Postman API from coding agents. |
-| Anthropic | Anthropic publishes the SKILL.md format, reference skill repositories, and the Skills feature in Claude Code that anchors the broader ecosystem. |
+## Open an issue
 
-## Artifacts
-
-Machine-readable specifications for the Agent Skills topic.
-
-### JSON Schema
-
-- [Skill Definition Schema](json-schema/agents-skills-skill-definition-schema.json)
-- [Skill Manifest Schema](json-schema/agents-skills-skill-manifest-schema.json)
-
-### JSON Structure
-
-- [Skill Definition Structure](json-structure/agents-skills-skill-definition-structure.json)
-- [Skill Manifest Structure](json-structure/agents-skills-skill-manifest-structure.json)
-
-### JSON-LD
-
-- [Agent Skills Context](json-ld/agents-skills-context.jsonld)
-
-## Vocabulary
-
-- [Agent Skills Vocabulary](vocabulary/agents-skills-vocabulary.yaml) — Unified taxonomy for skill bundles covering resources, actions, workflows, runtimes, and personas across vendor-published skill repositories.
-
-## Network
-
-This index references the following Agent Skills provider repositories:
-
-- [ActiveCampaign](https://github.com/api-evangelist/activecampaign)
-- [Airbyte](https://github.com/api-evangelist/airbyte)
-- [Airtable](https://github.com/api-evangelist/airtable)
-- [Android](https://github.com/api-evangelist/android)
-- [Angular](https://github.com/api-evangelist/angular)
-- [Anthropic](https://github.com/api-evangelist/anthropic)
-- [Anthropic Claude](https://github.com/api-evangelist/anthropic-claude)
-- [Apify](https://github.com/api-evangelist/apify)
-- [Apollo Config](https://github.com/api-evangelist/apollo-config)
-- [Apollo GraphQL](https://github.com/api-evangelist/apollo-graphql)
-- [Appium](https://github.com/api-evangelist/appium)
-- [Appwrite](https://github.com/api-evangelist/appwrite)
-- [Atlassian](https://github.com/api-evangelist/atlassian)
-- [Auth0](https://github.com/api-evangelist/auth0)
-- [Box](https://github.com/api-evangelist/box)
-- [Canva](https://github.com/api-evangelist/canva)
-- [Cerbos](https://github.com/api-evangelist/cerbos)
-- [Claude](https://github.com/api-evangelist/claude)
-- [Contentful](https://github.com/api-evangelist/contentful)
-- [Databricks](https://github.com/api-evangelist/databricks)
-- [Docsify](https://github.com/api-evangelist/docsify)
-- [Figma](https://github.com/api-evangelist/figma)
-- [Fivetran](https://github.com/api-evangelist/fivetran)
-- [GEMINI.md](https://github.com/api-evangelist/gemini-md)
-- [GitHub](https://github.com/api-evangelist/github)
-- [Google Gemini](https://github.com/api-evangelist/google-gemini)
-- [Hookdeck](https://github.com/api-evangelist/hookdeck)
-- [HubSpot](https://github.com/api-evangelist/hubspot)
-- [Hugging Face](https://github.com/api-evangelist/hugging-face)
-- [Jentic](https://github.com/api-evangelist/jentic)
-- [JFrog](https://github.com/api-evangelist/jfrog)
-- [MailerLite](https://github.com/api-evangelist/mailerlite)
-- [Microsoft TypeScript](https://github.com/api-evangelist/microsoft-typescript)
-- [MongoDB](https://github.com/api-evangelist/mongodb)
-- [ngrok](https://github.com/api-evangelist/ngrok)
-- [OpenAI](https://github.com/api-evangelist/openai)
-- [Postman](https://github.com/api-evangelist/postman)
-- [Prisma](https://github.com/api-evangelist/prisma)
-- [Pulumi](https://github.com/api-evangelist/pulumi)
-- [Replicate](https://github.com/api-evangelist/replicate)
-- [Resend](https://github.com/api-evangelist/resend)
-- [Sanity](https://github.com/api-evangelist/sanity)
-- [Speakeasy](https://github.com/api-evangelist/speakeasy)
-- [Supabase](https://github.com/api-evangelist/supabase)
-- [Temporal](https://github.com/api-evangelist/temporal)
-- [TypeScript](https://github.com/api-evangelist/typescript)
-- [Webflow](https://github.com/api-evangelist/webflow)
-- [WorkOS](https://github.com/api-evangelist/workos)
-- [Zoom](https://github.com/api-evangelist/zoom)
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/agents-skills/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
